@@ -1,0 +1,66 @@
+<header>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+			aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="navbar-brand">App List Task</div>
+
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+
+			<div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" role="button"
+							data-bs-toggle="dropdown" aria-expanded="false">Listagem das tarefas</a>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+							<li class="dropdown-item">
+								<form th:action="@{/tasks/list}" method="get">
+									<button type="submit" class="btn btn-outline-primary">Todas as
+										tarefa</button>
+								</form>
+							</li>
+
+							<li class="dropdown-item">
+								<form th:action="@{/tasks/atrasada}" method="get">
+									<button type="submit" class="btn btn-outline-danger">Tarefas
+										atrasadas</button>
+								</form>
+							</li>
+
+							<li class="dropdown-item">
+								<form th:action="@{/tasks/concluida}" method="get">
+									<button type="submit" class="btn btn-outline-success">Tarefas
+										concluidas</button>
+								</form>
+							</li>
+
+							<li class="dropdown-item">
+								<form th:action="@{/tasks/pendente}" method="get">
+									<button type="submit" class="btn btn-outline-warning">Tarefas pendentes a
+										realizar</button>
+								</form>
+							</li>
+
+							<li class="dropdown-item">
+								<form th:action="@{/tasks/new}" method="get">
+									<button type="submit" class="btn btn-outline-info">Cadastrar
+										tarefa</button>
+								</form>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<form th:action="@{/logout}" method="POST">
+							<button type="submit" class="nav-link btn btn-link">&lt;Sair&gt;</button>
+						</form>
+					</li>
+				</ul>
+			</div>
+			<form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+				<button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+			</form>
+		</div>
+	</nav>
+</header>

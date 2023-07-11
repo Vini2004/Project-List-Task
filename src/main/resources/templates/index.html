@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang=”pt-br” xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>| App List Task |</title>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.min.css}" />
+
+	<!-- Bootstrap para testes, apagar depois que configurar thymeleaf-->
+	<link href="../static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<style>
+		.btn-spacing {
+			margin-bottom: 6px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<header th:replace="~{base/baseIndex :: header}"></header>
+
+	<div class="container">
+
+		<br> <br>
+
+		<div class="row">
+
+			<div class="col">
+				<div class="card text-center">
+					<div class="card-header  card-title">
+						<h3>BEM-VINDO!</h3>
+					</div>
+					<div class="card-body">
+						<p class="card-text">Faça o Login caso tenha um cadastro ou se registre.</p>
+						<div class="btn-toolbar d-flex justify-content-center" role="toolbar"
+							aria-label="Toolbar com botões">
+							<div class="btn-group mr-2" role="group" aria-label="Botão Listar Tarefas">
+								<form th:action="@{/login}" method="get">
+									<button class="btn btn-outline-primary" type="submit" value="Submit">Login</button>
+								</form>
+							</div>
+							<div class="btn-group" role="group" aria-label="Botão Cadastrar Tarefa">
+								<form th:action="@{/register}" method="get">
+									<button class="btn btn-outline-success" type="submit"
+										value="Submit">Registrar-se</button>
+								</form>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+
+		</div>
+
+		<br>
+
+
+
+		<div th:replace="~{base/foot :: div}"> </div>
+
+		<!--JavaScript bootstrap-->
+		<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+
+			</script>
+</body>
+
+</html>

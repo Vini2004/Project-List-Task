@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang=”pt-br” xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>| App List Task |</title>
+
+	<link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.min.css}" />
+	<link href="../static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<header th:replace="~{base/base :: header}"></header>
+
+
+	<div class="jumbotron">
+		<h1 class="display-4">Ops, algo deu errado!</h1>
+		<p class="lead">Nos perdoe, parece que ocorreu algum erro com sua aplicação, por favor volte e tente novamente
+			mais tarde.</p>
+		<hr class="my-4">
+		<p>Fique a vontade para entrar em contato com nosso suporte para informar o erro, envie um e-mail para
+			suporteTaskList@gmail.com com um print e descrição do problema.</p>
+		<a class="btn btn-primary btn-lg" href="/" role="button">Home</a>
+	</div>
+
+	<div th:replace="~{base/foot :: div}"> </div>
+	
+	<!--JavaScript bootstrap-->
+	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+
+		</script>
+
+
+
+</body>
+
+</html>

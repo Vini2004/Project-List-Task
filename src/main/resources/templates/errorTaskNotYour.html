@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang=”pt-br” xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>| App List Task |</title>
+
+	<link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.min.css}" />
+	<link href="../static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<header th:replace="~{base/baseIndex :: header}"></header>
+
+
+	<div class="jumbotron">
+		<h1 class="display-4">Essa tarefa não é sua!</h1>
+		<p class="lead">Perdão, mas parece que essa tarefa não é de competência do seu usuário, volte e tente fazer login novamente por gentileza.</p>
+		<hr class="my-4">
+		<p>Caso identifique isso como erro, envie um e-mail para
+			suporteTaskList@gmail.com com um print e descrição do problema.</p>
+			<form th:action="@{/}" method="get">
+				<button class="btn btn-primary btn-lg" role="button">Home</button>	
+			</form>
+		
+	</div>
+
+	<div th:replace="~{base/foot :: div}"> </div>
+	
+	<!--JavaScript bootstrap-->
+	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+
+		</script>
+
+
+
+</body>
+
+</html>

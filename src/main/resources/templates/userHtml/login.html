@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>| App List Task | - Login</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}" />
+</head>
+
+<body>
+
+	<!-- Header -->
+	<header th:replace="~{base/baseIndex :: header}"></header>
+
+	<br> <br>
+
+	<div class="mx-auto" style="width: 800px;">
+		<div class="card">
+			<div class="card-body" th:if="${session.user == null}">
+				<div th:if="${param.error}" class="alert alert-danger">
+					Dados inválidos: Usuário ou senha
+				</div>
+
+				<form th:action="@{/login}" method="post">
+
+					<div class="mb-3">
+						<label>Enter Email</label>
+						<input type="text" name="username" class="form-control">
+					</div>
+
+					<div class="mb-3">
+						<label>Enter Password</label>
+						<input type="text" name="password" class="form-control">
+					</div>
+					<button class="btn btn-primary col-md-12">Login</button>
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+	<div th:replace="~{base/foot :: div}"> </div>
+</body>
+
+</html>

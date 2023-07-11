@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>| App List Task | - Register</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}" />
+	<link href="../../static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<!-- Header -->
+	<header th:replace="~{base/baseIndex :: header}"></header>
+
+	<br> <br>
+
+	<div class="mx-auto" style="width: 800px;">
+		<div class="card">
+			<div class="card-body">
+				<th:block th:include="mensagemValidacao"></th:block>
+				<form th:action="@{/createUser}" method="post" onsubmit="return validatePassword();">
+					<div class="mb-3">
+						<label>Enter Full Name</label>
+						<input type="text" name="name" class="form-control">
+					</div>
+					<div class="mb-3">
+						<label>Enter Email</label>
+						<input type="text" name="email" class="form-control">
+					</div>
+					<div class="mb-3">
+						<label>Enter Password</label>
+						<input type="password" name="password" id="password" class="form-control">
+					</div>
+					<div class="mb-3">
+						<label>Confirm Password</label>
+						<input type="password" name="confirmPassword" id="confirmPassword" class="form-control">
+					</div>
+					<button class="btn btn-primary col-md-12">Register</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div th:replace="~{base/foot :: div}"> </div>
+
+
+	<script th:src="@{/scripts/scriptRegister.js}"></script>
+</body>
+
+</html>
