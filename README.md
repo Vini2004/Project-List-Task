@@ -58,13 +58,4 @@
   <li><a href="https://www.linkedin.com/in/vinicius-almeida-nunes-5618411ba/">Linkedin</a></li>
 </ul>
 
-```properties
-spring_profiles_active=prod
-PROD_DB_HOST=containers-us-west-63.railway.app
-PROD_DB_PORT=5605
-PROD_DB_NAME=railway
-PROD_DB_PASSWORD=mGszPwdy3aMb6h658vqo
-PROD_DB_USERNAME=root
-```
-
 
