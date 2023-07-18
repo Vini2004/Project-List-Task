@@ -41,14 +41,13 @@
 										realizar</button>
 								</form>
 							</li>
-
-							<li class="dropdown-item">
-								<form th:action="@{/tasks/new}" method="get">
-									<button type="submit" class="btn btn-outline-info">Cadastrar
-										tarefa</button>
-								</form>
-							</li>
 						</ul>
+					</li>
+					<li>
+						<form th:action="@{/tasks/new}" method="get">
+							<button type="submit" class="nav-link btn btn-link">Cadastrar
+								tarefa</button>
+						</form>
 					</li>
 					<li>
 						<form th:action="@{/logout}" method="POST">
